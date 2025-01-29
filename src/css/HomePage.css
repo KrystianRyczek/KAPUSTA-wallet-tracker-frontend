@@ -15,15 +15,16 @@
     top: 142px;
   }
   .home-page-logo-box {
-    height: 286px;
+    height: 342px;
     width: 100%;
-    background-color: #f5f6fb;
+    background-color: var(--light-grey);
     border-bottom-left-radius: 150px;
   }
   .home-page-logo-h {
     font-size: 47px;
     font-weight: 700;
     color: var(--black);
+    margin-left: 20px;
   }
   .home-page-logo-p {
     text-align: center;
@@ -39,6 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
   }
 
   .home-page-bottom-svg-box {
@@ -53,7 +55,7 @@
   .home-page-svg-spot {
     width: 67px;
     height: 14px;
-    background-color: #f5f6fb;
+    background-color: var(--light-grey);
     border-radius: 50%;
   }
 
@@ -72,7 +74,7 @@
   .home-page-logo-box {
     height: 526px;
     width: 100%;
-    background-color: #f5f6fb;
+    background-color: var(--light-grey);
     border-bottom-left-radius: 150px;
   }
   .home-page-logo-h {
@@ -98,6 +100,7 @@
   }
   .home-page-container {
     /* width: 1280px; */
+    padding: 20px;
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -112,7 +115,7 @@
   .home-page-logo-box {
     height: 526px;
     width: 100%;
-    background-color: #f5f6fb;
+    background-color: var(--light-grey);
     border-bottom-left-radius: 150px;
   }
 
@@ -257,6 +260,6 @@
 .home-page-svg-spot {
   width: 67px;
   height: 14px;
-  background-color: #f5f6fb;
+  background-color: var(--light-grey);
   border-radius: 50%;
 }

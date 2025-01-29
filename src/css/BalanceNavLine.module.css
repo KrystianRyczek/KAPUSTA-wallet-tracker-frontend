@@ -1,5 +1,5 @@
 .box {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -36,7 +36,7 @@
 
 /* ------------------------ Balance ----------- */
 .balanceContainer {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,7 +88,7 @@
   width: 115px;
   height: 44px;
   background-color: #f2f5fc;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--white);
 }
 @media (min-width: 768px) {
   .balanceInput {
@@ -104,7 +104,7 @@
   width: 115px;
   height: 44px;
   background-color: #f2f5fc;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--white);
   color: var(--text-light-grey);
   border-top-right-radius: 22px;
   border-bottom-right-radius: 22px;
@@ -127,8 +127,8 @@
 }
 .balanceBtn:hover {
   transform: scale(1.05);
-  background-color: #ff751d;
-  color: white;
+  background-color: var(--orange);
+  color: var(--white);
 }
 .balanceBtn:active {
   filter: brightness(1.3);
@@ -144,7 +144,7 @@
 /* ------------------------ Report Data selection ----------- */
 
 .dataNav {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,7 +175,7 @@
   }
 }
 .back {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding-left: 20px;
   margin-top: 0px;
 }
@@ -250,7 +250,7 @@
 }
 .goBackBtn:hover {
   transform: scale(1.1);
-  color: #ff751d;
+  color: var(--orange);
 }
 .goBackBtn:active {
   filter: brightness(1.3);

@@ -8,7 +8,7 @@
 .transaction-page-bacgroud-box {
   height: 526px;
   width: 100%;
-  background-color: #f5f6fb;
+  background-color: var(--light-grey);
   border-bottom-left-radius: 150px;
   position: absolute;
   top: 0;

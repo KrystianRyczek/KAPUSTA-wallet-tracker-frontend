@@ -1,11 +1,11 @@
-import '../css/Transaction.css';
-import BtnToReports from './BtnToReports';
-import TransactionNavBtn from './TransactionNavBtn';
-import TransactionAddForm from './TransactionAddForm';
-import TransactionTable from './TransactionTable';
-import TransactionSummary from './TransactionSummary';
-import { useTransaction } from '../hooks/useTransaction';
-import BalanceNavLine from './BalanceNavLine';
+import "../css/Transaction.css";
+import BtnToReports from "./BtnToReports";
+import TransactionNavBtn from "./TransactionNavBtn";
+import TransactionAddForm from "./TransactionAddForm";
+import TransactionTable from "./TransactionTable";
+import TransactionSummary from "./TransactionSummary";
+import { useTransaction } from "../hooks/useTransaction";
+import BalanceNavLine from "./BalanceNavLine";
 
 export default function Transaction({
   activeSheet,
@@ -26,7 +26,7 @@ export default function Transaction({
       />
       <div className="transaction-sheet">
         <TransactionAddForm activeSheet={activeSheet} />
-        <div className="transaction-tables-box">
+        <div className="transaction-tables-and-summary-box">
           <TransactionTable activeSheet={activeSheet} />
           <TransactionSummary activeSheet={activeSheet} />
         </div>
