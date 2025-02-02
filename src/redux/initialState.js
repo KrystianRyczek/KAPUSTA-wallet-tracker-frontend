@@ -36,10 +36,10 @@ const init = {
 };
 
 const initStorageValue = () => {
-  const userLocaldata = window.localStorage.getItem('userLocaldata');
+  const userLocaldata = window.localStorage.getItem("userLocaldata");
   const initState = init;
   if (userLocaldata !== null) {
-    initState.token = JSON.parse(userLocaldata)
+    initState.token = JSON.parse(userLocaldata);
   }
   return initState;
 };

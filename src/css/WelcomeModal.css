@@ -20,7 +20,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--white);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -48,7 +48,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: white;
+  color: var(--white);
   line-height: 1.5;
   margin-bottom: 20px;
   height: 38px;
@@ -59,7 +59,7 @@
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: white;
+  color: var(--white);
   line-height: 1.4;
   height: 33px;
   width: 229px;

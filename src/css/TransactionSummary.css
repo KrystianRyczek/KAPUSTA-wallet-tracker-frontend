@@ -7,7 +7,7 @@
 }
 .transaction-summary-box {
   width: 213px;
-  background-color: #f5f6fb;
+  background-color: var(--light-grey);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -22,7 +22,7 @@
   letter-spacing: 2%;
 }
 .summary-table-head-p {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid var(--white);
   width: 213px;
   height: 28px;
   display: flex;
@@ -31,7 +31,7 @@
   padding: 0 20px 0 20px;
 }
 .summary-table-row {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid var(--white);
   width: 213px;
   height: 28px;
   display: flex;

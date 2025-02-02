@@ -1,21 +1,21 @@
-import css from '../css/BalanceNavLine.module.css';
-import { useSelectedDate } from '../hooks/useSelectedDate';
-import arrowIcon from '../images/arrow.png';
-import { useBtnGoBack } from '../hooks/useBtnGoBack';
-import { Field, Form, Formik, ErrorMessage } from 'formik';
-import { useBalance } from '../hooks/useBalance';
-import { useState, useEffect } from 'react';
-import WelcomeModal from './WelcomeModal';
-import { useLocation } from 'react-router-dom';
+import css from "../css/BalanceNavLine.module.css";
+import { useSelectedDate } from "../hooks/useSelectedDate";
+import arrowIcon from "../images/arrow.png";
+import { useBtnGoBack } from "../hooks/useBtnGoBack";
+import { Field, Form, Formik, ErrorMessage } from "formik";
+import { useBalance } from "../hooks/useBalance";
+import { useState, useEffect } from "react";
+import WelcomeModal from "./WelcomeModal";
+import { useLocation } from "react-router-dom";
 
 const BalanceNavLine = () => {
   const { selectedDate, setSelectedDate, monthNames, currentDate } =
     useSelectedDate();
 
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handlePrevious = () => {
-    setErrorMessage('');
+    setErrorMessage("");
     const previousDate = new Date(
       selectedDate.year,
       selectedDate.monthIndex - 1
@@ -31,10 +31,10 @@ const BalanceNavLine = () => {
       (nextDate.getFullYear() === todayDate.getFullYear() &&
         nextDate.getMonth() > todayDate.getMonth())
     ) {
-      setErrorMessage('You cannot move forward');
+      setErrorMessage("You cannot move forward");
       return;
     }
-    setErrorMessage('');
+    setErrorMessage("");
     setSelectedDate(nextDate);
   };
 
@@ -67,14 +67,15 @@ const BalanceNavLine = () => {
     <>
       {/* --------------- Go back btn*/}
       <div className={css.box}>
-        {location.pathname !== '/transaction/expenses' && (
-          <div className={css.back}>
-            <button onClick={handleBack} className={css.goBackBtn}>
-              <img src={arrowIcon} alt="Go Back" className={css.arrowIcon} />
-              Main page
-            </button>
-          </div>
-        )}
+        {location.pathname !== "/transaction/expenses" &&
+          location.pathname !== "/transaction/incomes" && (
+            <div className={css.back}>
+              <button onClick={handleBack} className={css.goBackBtn}>
+                <img src={arrowIcon} alt="Go Back" className={css.arrowIcon} />
+                Main page
+              </button>
+            </div>
+          )}
         <div className={css.toFlip}>
           {/* --------------- Balance */}
           <div className={css.balanceContainer}>
@@ -84,18 +85,18 @@ const BalanceNavLine = () => {
               initialValues={formBalance}
               onSubmit={(values, actions) => {
                 setBalance(values, actions);
-                actions.resetForm({ values: { balance: '' } });
+                actions.resetForm({ values: { balance: "" } });
               }}
             >
               {({ values }) => (
                 <Form className={css.balanceForm}>
-                  <div style={{ position: 'relative' }}>
+                  <div style={{ position: "relative" }}>
                     <Field
                       className={css.balanceInput}
                       type="text"
                       name="balance"
                       placeholder={
-                        balance !== undefined ? balance.toString() : '0'
+                        balance !== undefined ? balance.toString() : "0"
                       }
                     />
                     {values.balance === 0 && isWelcomeModalOpen && (
@@ -120,25 +121,26 @@ const BalanceNavLine = () => {
             </Formik>
           </div>
           {/* --------------- Data Selection */}
-          {location.pathname !== '/transaction/expenses' && (
-            <div className={css.dataNav}>
-              <p>Current period:</p>
-              <div className={css.dataArrows}>
-                <button onClick={handlePrevious} className={css.arrowBtn}>
-                  {'<'}
-                </button>
-                <span className={css.dataBold}>
-                  {formatDate(selectedDate.monthIndex, selectedDate.year)}
-                </span>
-                <button onClick={handleNext} className={css.arrowBtn}>
-                  {'>'}
-                </button>
+          {location.pathname !== "/transaction/expenses" &&
+            location.pathname !== "/transaction/incomes" && (
+              <div className={css.dataNav}>
+                <p>Current period:</p>
+                <div className={css.dataArrows}>
+                  <button onClick={handlePrevious} className={css.arrowBtn}>
+                    {"<"}
+                  </button>
+                  <span className={css.dataBold}>
+                    {formatDate(selectedDate.monthIndex, selectedDate.year)}
+                  </span>
+                  <button onClick={handleNext} className={css.arrowBtn}>
+                    {">"}
+                  </button>
+                </div>
+                {errorMessage && (
+                  <p className={css.errorMessage}>{errorMessage}</p>
+                )}
               </div>
-              {errorMessage && (
-                <p className={css.errorMessage}>{errorMessage}</p>
-              )}
-            </div>
-          )}
+            )}
         </div>
       </div>
     </>

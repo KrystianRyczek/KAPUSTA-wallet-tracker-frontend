@@ -17,7 +17,8 @@ const transactionTableRow = (row, deleteTransaction) => {
         onClick={() => {
           deleteTransaction(row._id);
         }}
-        className="transaction-table-delate-btn">
+        className="transaction-table-delate-btn"
+      >
         <img src={delate} alt="Delate icon" />
       </button>
     </div>
@@ -31,11 +32,11 @@ export default function TransactionTable({ activeSheet }) {
     deleteModalClose,
     modalIsOpen,
   } = useTransactionTable(activeSheet);
-  
+
   const transactionData = transactionTableData();
 
   return (
-    <div className="">
+    <div className="transaction-table-all">
       <div className="transaction-table-head-box">
         <p className="transaction-table-head">DATE</p>
         <p className="transaction-table-head">DESCRIPTION</p>

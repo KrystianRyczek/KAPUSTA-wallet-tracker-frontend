@@ -3,7 +3,7 @@
   height: 40px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .transaction-nav-btn-container h1 {
@@ -30,7 +30,7 @@
   height: 40px;
   background-color: #fafbfd;
   border: none;
-  color: #000000;
+  color: var(--black);
   font-size: 12px;
   font-weight: 700;
   line-height: 14.06px;
@@ -45,7 +45,7 @@
   height: 44px;
   background-color: #fefefe;
   border: none;
-  color: #ff751d;
+  color: var(--orange);
   font-size: 12px;
   font-weight: 700;
   line-height: 14.06px;

@@ -7,7 +7,7 @@
     position: absolute;
     top: 317px;
     left: 171px;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 30px;
     box-shadow: 0px 10px 10px 0px #aab2c533;
   }
@@ -19,7 +19,7 @@
     position: absolute;
     top: 117px;
     left: 763px;
-    background-color: #ffffff;
+    background-color: var(--white);
     border-radius: 30px;
     box-shadow: 0px 10px 10px 0px #aab2c533;
   }
@@ -66,19 +66,19 @@
 .isActive {
   width: 122px;
   height: 44px;
-  background-color: #ff751d;
+  background-color: var(--orange);
   border-radius: 16px;
   border: none;
-  color: #ffffff;
+  color: var(--white);
   box-shadow: 0px 5px 5px 0px #ff6b0859;
 }
 .isInActive {
   width: 122px;
   height: 44px;
-  background-color: #f5f6fb;
+  background-color: var(--light-grey);
   border-radius: 16px;
   border: none;
-  color: #52555f;
+  color: var(--text-grey);
   box-shadow: 0px 5px 5px 0px #aab2c533;
 }
 .error-msg {
